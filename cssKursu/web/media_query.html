@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Öğreniyorum :)</title>
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+
+        <style>
+            img{
+                width: 300px;
+                height: 100px;
+                border: springgreen solid;
+                object-fit: cover;
+            }
+
+            @media screen and (max-width:400px) {
+                body{
+                    background-color: chartreuse;
+                }
+
+                img{
+                    width: 100%;
+                }
+            }
+
+            /*Cihaz Yan Tutulursa Arka Plan Gri Olsun
+            @media only screen and (orientation:landspace){
+            body{
+             backgroun-color:green;
+             }
+            }
+            */
+        </style>
+    </head>
+    <body>
+        <img src="bayrak.jpeg" alt="bayrak">
+    </body>
+</html>

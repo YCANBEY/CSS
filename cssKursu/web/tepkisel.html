@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Öğreniyorum :)</title>
+        <meta name="viewport" content="width=device-width , initial-scale=1">
+
+        <style>
+            /*margin ve padding kutu boyutuna dahil edilsin*/
+            *{
+                box-sizing: border-box;
+            }
+
+            /*KUTU GENİŞLİKLERİ*/
+            .col-1{width: 8.33%;}
+            .col-2{width: 16.66%;}
+            .col-3{width: 25%;}
+            .col-4{width: 33.33%;}
+            .col-5{width: 41.66%;}
+            .col-6{width: 50%;}
+            .col-7{width: 58.33%;}
+            .col-8{width: 66.66%;}
+            .col-9{width: 75%;}
+            .col-10{width: 83.33%;}
+            .col-11{width: 91.66%;}
+            .col-12{width: 100%;}
+
+            /*Aynı satır içinde bulunan kutuların
+            sola yaslandırılması ve yan yana gelebilmesi
+            için CSS kodu
+            "col-" ile başlayan tüm sınıflara uygulansın */
+            [class*="col-"]{
+                float: left;
+                padding: 15px;
+                border: 1px solid red;
+            }
+
+            /*Izgarada(gridview) kullanılan satır(row) içeriklerinin temizlenmesi, her satırın
+            alt alta gelmesi ve float komutundan
+            etkilenip sola yaslanmaması için
+            aşağıdaki kodlar yazılır.
+            Satır içeriklerini temizletip tablo gibi gösterelim.*/
+            .row::after{
+                content: "";
+                clear: both;
+                display: table ;
+            }
+
+            /*Max. genişliği 768px olan(yani, 768px'den küçük) ekranlarda her kutu satırın %100'ünü kaplasın.
+            Cep telefonlarında her kutu %100 genişlikte olsun.*/
+            @media screen and (max-width: 768px) {
+                [class*="col-"]{width:100%}
+            }
+            
+            /*Tepkisel Resim*/               
+            img{
+                width: 100%;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="row1" class="row">
+            <div id="logo" class="col-2">
+                <img src="bayrak.jpeg" alt="bayrak">
+            </div>
+            <div id="anamenu" class="col-10">
+                ANAMENU
+            </div>
+        </div>   
+        <div id="row2" class="row">
+            <div id="icerik" class="col-9">
+                ICERIK
+            </div>
+            <div id="yanmenu" class="col-3">
+                YAN MENU
+            </div>
+        </div>
+        <div id="row3" class="row">
+            <div id="altsol" class="col-4">
+                ALT SOL
+            </div>
+            <div id="altorta" class="col-4">
+                ALT ORTA
+            </div>
+            <div id="altsag" class="col-4">
+                ALT SAG
+            </div>
+        </div>     
+    </body>
+</html>

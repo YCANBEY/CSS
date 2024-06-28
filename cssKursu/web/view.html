@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Öğreniyorum :)</title>
+
+        <!--Bu kod ile farklı cihazlara göre ekran boyutu
+        ayarlanır-->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+        <style>
+            img{
+                width:300px;
+                height: 100px;
+                border: solid green 2px;
+
+                /*   
+                resim boyut değiştirmez orjinal 
+                boyutunda gösterilir, yükseklik ve
+                genişlik sığmazsa kırpılır
+                object-fit: none;
+                */
+
+                /* 
+                resim kutunun içine sığacak şekilde
+                genişletilir ve ona göre ayarlanır.
+                object-fit: fill; 
+                */
+
+                
+                /* 
+                en boy oranı korunarak, belirlenen
+                alana sığdırılır. 
+                 */
+                object-fit: contain; 
+                
+
+                /* 
+                resmin genişliği kutuya sığacak şekil de 
+                doldurulur.
+                object-fit: cover; 
+                */
+            }
+        </style>
+    </head>
+    <body>
+        <img src="bayrak.jpeg" alt="bayrak">
+        
+    </body>
+</html>
